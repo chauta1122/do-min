@@ -163,11 +163,11 @@ void newgame(unsigned char** T, int maxrow, int maxcol) {
 }
 int open_all_zero(unsigned char** T, int x, int y, int maxrow, int maxcol)
 {
-
+   
     int i, j;
     T[x][y] = T[x][y] | ONOPEN;
 
-
+    
 
     if (getNeigBomStatus(T[x][y]) == 0)
     {
@@ -185,7 +185,7 @@ int open_all_zero(unsigned char** T, int x, int y, int maxrow, int maxcol)
                     {
 
                         int test;
-                        test = getIsOpenStatus(T[x + i][y + j] && T[x + i][y + j]);
+                        test = getIsOpenStatus(T[x + i][y + j] );
 
                         if (test == 0)
                         {
